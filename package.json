@@ -1,0 +1,23 @@
+{
+  "name": "react-package-rollup",
+  "version": "0.0.1",
+  "description": "Boilerplate for React package bundled with Rollup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomekmularczyk/react-package-rollup.git"
+  },
+  "keywords": [
+    "rollup",
+    "react",
+    "package",
+    "npm",
+    "module",
+    "es6"
+  ],
+  "author": "Tomasz Mularczyk",
+  "license": "ISC"
+}
