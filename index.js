@@ -1,1 +1,3 @@
-export const chuj = () => console.log('chu!');
+import MyComponent from './src/MyComponent';
+
+export default MyComponent;
