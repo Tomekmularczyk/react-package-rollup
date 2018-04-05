@@ -10,10 +10,11 @@ export default {
   },
   plugins: [
     babel({
-      exclude: 'node_modules/**'
+      exclude: 'node_modules/**',
+      externalHelpers: true,
     }),
-    commonjs(),
     resolve(),
+    commonjs(),
   ],
   external: ['react'],
 }
