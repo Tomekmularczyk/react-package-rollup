@@ -1,20 +1,26 @@
-import babel from 'rollup-plugin-babel';
-import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
+import babel from "rollup-plugin-babel";
+import commonjs from "rollup-plugin-commonjs";
+import resolve from "rollup-plugin-node-resolve";
+import replace from "rollup-plugin-replace";
+
+const NODE_ENV = process.env.NODE_ENV;
+const fileName = NODE_ENV === "production" ? "./lib/prod.js" : "./lib/dev.js";
 
 export default {
-  input: './index.js',
+  input: "./src/HelloWorld.js",
   output: {
-    file: './lib/index.js',
-    format: 'cjs',
+    file: fileName,
+    format: "cjs"
   },
   plugins: [
+    replace({
+      "process.env.NODE_ENV": JSON.stringify(NODE_ENV)
+    }),
     babel({
-      exclude: 'node_modules/**',
-      externalHelpers: true,
+      exclude: "node_modules/**"
     }),
     resolve(),
-    commonjs(),
+    commonjs()
   ],
-  external: ['react'],
-}
+  external: ["react"]
+};
