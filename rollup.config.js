@@ -3,7 +3,7 @@ import commonjs from "rollup-plugin-commonjs";
 import resolve from "rollup-plugin-node-resolve";
 import replace from "rollup-plugin-replace";
 
-const NODE_ENV = process.env.NODE_ENV;
+const { NODE_ENV } = process.env;
 const fileName = NODE_ENV === "production" ? "./lib/prod.js" : "./lib/dev.js";
 
 export default {
