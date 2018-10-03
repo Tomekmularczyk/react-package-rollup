@@ -1,6 +1,10 @@
 import React from "react";
 
-class HelloWorld extends React.Component {
+interface Props {
+  text: string
+}
+
+class HelloWorld extends React.Component<Props> {
   state = {
     message: "Hello world!"
   };

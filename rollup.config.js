@@ -7,7 +7,7 @@ const { NODE_ENV } = process.env;
 const fileName = NODE_ENV === "production" ? "./lib/prod.js" : "./lib/dev.js";
 
 export default {
-  input: "./src/HelloWorld.js",
+  input: "./src/HelloWorld.tsx",
   output: {
     file: fileName,
     format: "cjs"
@@ -17,9 +17,12 @@ export default {
       "process.env.NODE_ENV": JSON.stringify(NODE_ENV)
     }),
     babel({
-      exclude: "node_modules/**"
+      exclude: "node_modules/**",
+      extensions: [".ts", ".tsx"]
     }),
-    resolve(),
+    resolve({
+      extensions: [".ts", ".tsx"]
+    }),
     commonjs()
   ],
   external: ["react"]
