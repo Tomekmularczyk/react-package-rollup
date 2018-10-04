@@ -25,5 +25,5 @@ export default {
     }),
     commonjs()
   ],
-  external: ["react"]
+  external: ["react", "cannon", "oimo", "earcut"]
 };
