@@ -18,10 +18,10 @@ export default {
     }),
     babel({
       exclude: "node_modules/**",
-      extensions: [".ts", ".tsx"]
+      extensions: [".js", ".ts", ".tsx"]
     }),
     resolve({
-      extensions: [".ts", ".tsx"]
+      extensions: [".js", ".ts", ".tsx"]
     }),
     commonjs()
   ],
