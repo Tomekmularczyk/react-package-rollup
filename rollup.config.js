@@ -7,7 +7,7 @@ const { NODE_ENV } = process.env;
 const fileName = NODE_ENV === "production" ? "./lib/prod.js" : "./lib/dev.js";
 
 export default {
-  input: "./src/HelloWorld.tsx",
+  input: "./src/Viewer.tsx",
   output: {
     file: fileName,
     format: "cjs"
